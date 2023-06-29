@@ -43,7 +43,7 @@ export const eliminarTarea = (id) => async(dispatch, getState) => {
         const del = await axios.delete("http://localhost:8080/tareas/"+id)
         dispatch({
             type:"DEL_TAREA",
-            payload: del.id
+            payload: del.id 
         });
     }catch (error){
       console.log(error);
